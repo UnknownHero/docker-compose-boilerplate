@@ -1,7 +1,4 @@
 *.iml
 .idea
-!src/example/*
-!src/common/*
-src/*
-
+src/contexts/*
 
