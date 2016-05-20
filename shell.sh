@@ -7,6 +7,7 @@ CONTAINER_NAME="none"
 if [ $# -eq 0 ]
 then
     echo "Please, provide all arguments. Check README"
+    exit 1;
 fi
 
 if [ $# -eq 1 ]
@@ -27,9 +28,12 @@ then
     CONTAINER_NUMBER=$3
 fi
 
-if ! [ -d "$CONTEXT_NAME" ]; then
+if ! [ -d "src/$CONTEXT_NAME" ]; then
     echo "CONTEXT '$CONTEXT_NAME' not exists. Please, check README";
     exit 1;
 fi
+DOCKER_CONTAINER_NAME+=$CONTEXT_NAME;DOCKER_CONTAINER_NAME+='_';
+DOCKER_CONTAINER_NAME+=$CONTAINER_NAME;DOCKER_CONTAINER_NAME+='_';
+DOCKER_CONTAINER_NAME+=$CONTAINER_NUMBER;
 
-docker exec -it $CONTEXT_NAME_$CONTAINER_NAME_$CONTAINER_NUMBER bash
+docker exec -it $DOCKER_CONTAINER_NAME bash;
