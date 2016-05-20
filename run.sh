@@ -12,7 +12,7 @@ if ! [ -d "contexts/$CONTEXT_NAME" ]; then
     exit 1;
 fi
 
-cd contexts/$CONTEXT_NAME && docker-compose  build && docker-compose up -d && cd ..
+cd contexts/$CONTEXT_NAME && docker-compose pull --ignore-pull-failures docker-compose  build && docker-compose up -d && cd ..
 
 
 
