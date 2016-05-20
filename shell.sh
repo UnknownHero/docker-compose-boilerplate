@@ -1,9 +1,9 @@
 #!/bin/sh
 
-CONTAINER_NUMBER = 1;
+CONTAINER_NUMBER=3;
 
-if [ -z "$3" ]; then CONTAINER_NUMBER = 1; else
-        CONTAINER_NUMBER = $3
+if [ -z "$3" ]; then CONTAINER_NUMBER=1; else
+        CONTAINER_NUMBER=$3
 fi
 
 if [ -z "$1" ]; then echo "Please, set CONTEXT name";exit 1; else
