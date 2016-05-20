@@ -1,1 +1,10 @@
 #some example containers. More: https://docs.docker.com/compose/compose-file/
+
+web:
+  extends:
+    file: ./../common/docker-compose.yml
+    service: web
+  volumes:
+    - "./../../application:/src/app"
+  env_file:
+    - ./env/example.env

@@ -1,2 +1,8 @@
 #some common containers. More: https://docs.docker.com/compose/compose-file/
 
+web:
+  build: ./../../application
+  ports:
+    - "3030:3000"
+  env_file:
+    - ./env/common.env
