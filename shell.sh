@@ -1,8 +1,10 @@
 #!/bin/sh
 
-CONTAINER_NUMBER=1;
-CONTEXT_NAME="default"
+source ./default.sh;
+
+CONTEXT_NAME=$DEFAULT_CONTEXT_NAME;
 CONTAINER_NAME="none"
+CONTAINER_NUMBER=1;
 
 if [ $# -eq 0 ]
 then

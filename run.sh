@@ -1,6 +1,8 @@
 #!/bin/sh
 
-CONTEXT_NAME="default"
+source ./default.sh;
+
+CONTEXT_NAME=$DEFAULT_CONTEXT_NAME;
 
 if [ $# -eq 1 ]
 then
@@ -13,6 +15,7 @@ if ! [ -d "contexts/$CONTEXT_NAME" ]; then
 fi
 
 cd contexts/$CONTEXT_NAME && docker-compose pull --ignore-pull-failures && docker-compose  build && docker-compose up -d && cd ..
+
 
 
 

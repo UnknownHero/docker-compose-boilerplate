@@ -1,6 +1,8 @@
 #!/bin/sh
 
-CONTEXT_NAME="default"
+source ./default.sh;
+
+CONTEXT_NAME=$DEFAULT_CONTEXT_NAME;
 
 if [ $# -eq 0 ]
 then
