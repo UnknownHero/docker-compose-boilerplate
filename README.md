@@ -14,3 +14,10 @@
  - Get shell access to container:  ``` ./shell.sh CONTEXT CONTAINER ```
  - Restart container:  ``` ./restart.sh CONTEXT CONTAINER ```
  - Remove containers: ```./remove.sh CONTEXT ```
+ 
+# DEFAULT CONTEXT
+If you have only one CONTEXT and doesn't want write always CONTEXT name for commands, you can set your CONTEXT name = 'default'
+
+For example: ``` cp -r src/example src/default ```
+
+Now you can don't write CONTEXT name always for shell scripts. Enjoy!
