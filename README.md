@@ -20,6 +20,6 @@ If you have only one CONTEXT and doesn't want write always CONTEXT name for comm
 
 For example: ``` cp -r src/example src/default ```
 
-Now you can don't write CONTEXT name always for shell scripts. Enjoy!
+Now you don't write CONTEXT name always for shell scripts. Enjoy!
 
 Also you can customize name of default CONTEXT. Just edit name in default.sh 
