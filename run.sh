@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./default.sh;
+. ./default.sh;
 
 CONTEXT_NAME=$DEFAULT_CONTEXT_NAME;
 
@@ -14,7 +14,4 @@ if ! [ -d "contexts/$CONTEXT_NAME" ]; then
     exit 1;
 fi
 
-cd contexts/$CONTEXT_NAME && docker-compose build --pull && docker-compose  build && docker-compose up -d && cd ..
-
-
-
+cd contexts/$CONTEXT_NAME && docker-compose build --pull && docker-compose  build && docker-compose up --remove-orphans -d && cd ..

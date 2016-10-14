@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./default.sh;
+. ./default.sh;
 
 CONTEXT_NAME=$DEFAULT_CONTEXT_NAME;
 CONTAINER_NAME="none"
